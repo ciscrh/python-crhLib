@@ -1,0 +1,42 @@
+crh custom Python Module Dependencies
+-------------------------------------
+Note that some of these modules also require extension modules not included in the standard Python distribution.
+
+Tier 1 
+------
+(not dependent on any other crh modules)
+crhGV      -- pseudo global variables
+crhMisc    -- miscellaneous utilities
+crhPexif   -- modified pexif.py to suit crh requirements
+crhSQL3    -- SQLite3 utilities
+crhString  -- string functions
+crhWA2     -- low level access to Wild apricot API v2
+crhWA2Xtra -- extended low level access to Wild Apricot API v2
+crhWidget  -- class utilities (under development, not usable)
+
+Tier 2
+------
+(dependent on crh tier 1 modules)
+crhClass       -- windows app class utilities (deprecated, use crhWinClass) [crhString]
+crhDebug       -- debug and message utilities [crhGV]
+crhPDF         -- pdf document utilities [crhGV]
+crhPIL.py      -- PIL (Pillow Exif) utilities [crhString]
+crhWinClass.py -- windows app class utilities [crhString]
+
+Tier 3
+------
+(dependent on crh tier 1|2 modules)
+crhBSV   -- bsv file processing utilities [crhDebug]
+crhDate  -- date and time utilities [crhGV, crhDebug]
+crhExif  -- pexif (exif data) utilities [crhDebug, crhString]
+crhFile  -- file utilities [crhGV, crhDebug, crhString]
+crhLDAP  -- ldap utilities (under development, not usable) [crhGV, crhDebug]
+crhMap   -- mapping utilities [crhString, crhDebug]
+crhTimer -- stopwatch timer [crhGV, crhDebug]
+
+Tier 4
+------
+(dependent on crh tier 1|2|3 modules)
+crhConfig     -- configuration file utilities [crhDebug]
+crhFileRename -- file rename utilities, extends crhFile [crhGV, crhString, crhDebug, crhFile]
+crhGPX        -- GPX (xml) data utilities [crhString, crhDebug, crhMap]
